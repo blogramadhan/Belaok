@@ -7,7 +7,7 @@ from bela_dash import run_bela_dash
 
 def main():
     # Page Setting
-    st.set_page_config(layout="wide")
+    st.set_page_config(page_title="Hello world", layout="wide")
     
     st.title("Dashboard BelaOK Provinsi Kalimantan Barat")
 
