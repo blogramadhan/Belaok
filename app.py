@@ -6,6 +6,9 @@ from bela_dash import run_bela_dash
 #from bela_top import run_bela_top
 
 def main():
+    # Page Setting
+    st.set_page_config(layout="wide")
+    
     st.title("Dashboard BelaOK Provinsi Kalimantan Barat")
 
     menu = ["Home", "Dashboard BelaOK", "TOP 10"]
