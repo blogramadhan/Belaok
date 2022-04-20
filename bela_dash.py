@@ -45,7 +45,7 @@ def run_bela_dash():
 
     # Row Jumlah Produk, Transaksi dan Vendor
     a1, a2, a3 = st.columns(3)
-    a1.metric("Jumlah Produk", '{:.}'.format(sku[0]))
+    a1.metric("Jumlah Produk", '{:,}'.format(sku[0]))
     a2.metric("Jumlah Transaksi", '{:,}'.format(transaksi[0]))
     a3.metric("Jumlah Vendor", '{:,}'.format(vendor[0]))
 
