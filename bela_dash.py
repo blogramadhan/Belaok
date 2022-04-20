@@ -52,14 +52,14 @@ def run_bela_dash():
     # Row Nilai PO Created, PO Delivered dan PO Close
     b1, b2, b3 = st.columns(3)
     b1.metric("PO Created (Rp.)", '{:,}'.format(po_created))
-    b2.metric("PO Delivered (Rp.)", po_delivered['sub_total'].sum())
-    b3.metric("PO Close (Rp.)", po_close['sub_total'].sum())
+    b2.metric("PO Delivered (Rp.)", '{:,}'.format(po_delivered['sub_total'].sum()))
+    b3.metric("PO Close (Rp.)", '{:,}'.format(po_close['sub_total'].sum()))
 
     # Row Nilai Pajak Daerah, PPN dan PPH
     c1, c2, c3 = st.columns(3)
-    c1.metric("Pajak Daerah (Rp.)", po_pd)
-    c2.metric("PPN PKP (Rp.)", po_ppn)
-    c3.metric("PPH 22 dan PPH 23 (Rp.)", po_pph)
+    c1.metric("Pajak Daerah (Rp.)", '{:,}'.format(po_pd))
+    c2.metric("PPN PKP (Rp.)", '{:,}'.format(po_ppn))
+    c3.metric("PPH 22 dan PPH 23 (Rp.)", '{:,}'.format(po_pph))
 
     # Row Top 10 OPD Transaksi Terbanyak
     d1, d2 = st.columns((5,5))
