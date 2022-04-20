@@ -30,8 +30,8 @@ def run_bela_dash():
 
     # Olah data Nilai PO Created, PO Delivered dan PO Close
     po_created = df['sub_total'].sum()
-    po_delivered = df[(df['status_po'] == "PO Delivered")]
-    po_close = df[(df['status_po'] == "PO Close")]
+    po_delivered = df[(df['status_po'] == "PO Delivered")]['sub_total'].sum()
+    po_close = df[(df['status_po'] == "PO Close")]['sub_total'].sum()
 
     # Olah data Nilai Pajak Daerah, PPN dan PPH
     po_pd = po_close['pajak_daerah'].sum()
@@ -52,8 +52,8 @@ def run_bela_dash():
     # Row Nilai PO Created, PO Delivered dan PO Close
     b1, b2, b3 = st.columns(3)
     b1.metric("PO Created (Rp.)", po_created)
-    b2.metric("PO Delivered (Rp.)", po_delivered['sub_total'].sum())
-    b3.metric("PO Close (Rp.)", po_close['sub_total'].sum())
+    b2.metric("PO Delivered (Rp.)", po_delivered)
+    b3.metric("PO Close (Rp.)", po_close)
 
     # Row Nilai Pajak Daerah, PPN dan PPH
     c1, c2, c3 = st.columns(3)
