@@ -45,9 +45,9 @@ def run_bela_dash():
 
     # Row Jumlah Produk, Transaksi dan Vendor
     a1, a2, a3 = st.columns(3)
-    a1.metric("Jumlah Produk", sku[0])
-    a2.metric("Jumlah Transaksi", transaksi[0])
-    a3.metric("Jumlah Vendor", vendor[0])
+    a1.metric("Jumlah Produk", '{:\.}'.format(sku[0]))
+    a2.metric("Jumlah Transaksi", '{:,}'.format(transaksi[0]))
+    a3.metric("Jumlah Vendor", '{:,}'.format(vendor[0]))
 
     # Row Nilai PO Created, PO Delivered dan PO Close
     b1, b2, b3 = st.columns(3)
