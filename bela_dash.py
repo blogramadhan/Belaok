@@ -13,10 +13,7 @@ def run_bela_dash():
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
     # Dataset
-    url = 'https://docs.google.com/spreadsheets/d/10pgFR2EhoC1gr5hKFK6eBRKBICysbdde/edit?usp=sharing&ouid=101732956177601031372&rtpof=true&sd=true'
-    path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]  
-    
-    df = pd.read_excel(path, sheet_name="list_po")
+    df = pd.read_excel("data/belaok_mentah_16042022.xlsx", sheet_name="list_po")
     dfsku = pd.read_excel("data/belaok_mentah_16042022.xlsx", sheet_name="list_sku")
     dfv = pd.read_excel("data/belaok_mentah_16042022.xlsx", sheet_name="list_vendor")
 
