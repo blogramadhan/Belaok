@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from babel.numbers import format_currency
 
 def run_bela_dash():
     # Page Setting
