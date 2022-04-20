@@ -53,8 +53,8 @@ def run_bela_dash():
     # Row Nilai PO Created, PO Delivered dan PO Close
     b1, b2, b3 = st.columns(3)
     b1.metric("PO Created (Rp.)", po_created)
-    b2.metric("PO Delivered (Rp.)", format_currency(po_delivered['sub_total'].sum(), 'Rp. ', locale='id_ID')
-    b3.metric("PO Close (Rp.)", format_currency(po_close['sub_total'].sum(), 'Rp. ', locale='id_ID')
+    b2.metric("PO Delivered (Rp.)", format_currency(po_delivered['sub_total'].sum(), 'Rp. ', locale='id_ID'))
+    b3.metric("PO Close (Rp.)", format_currency(po_close['sub_total'].sum(), 'Rp. ', locale='id_ID'))
     
     # Row Nilai Pajak Daerah, PPN dan PPH
     c1, c2, c3 = st.columns(3)
