@@ -4,4 +4,3 @@ matplotlib
 numpy
 streamlit
 openpyxl
-babel.numbers
