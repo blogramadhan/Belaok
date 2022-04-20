@@ -51,7 +51,7 @@ def run_bela_dash():
 
     # Row Nilai PO Created, PO Delivered dan PO Close
     b1, b2, b3 = st.columns(3)
-    b1.metric("PO Created (Rp.)", po_created)
+    b1.metric("PO Created (Rp.)", '{:,}'.format(po_created))
     b2.metric("PO Delivered (Rp.)", po_delivered['sub_total'].sum())
     b3.metric("PO Close (Rp.)", po_close['sub_total'].sum())
 
