@@ -12,11 +12,6 @@ def run_bela_dash():
     with open('style.css') as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-    '''
-    seattle_weather = pd.read_csv('https://raw.githubusercontent.com/tvst/plost/master/data/seattle-weather.csv', parse_dates=['date'])
-    stocks = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/stocks_toy.csv')
-    '''
-
     # Dataset
     df = pd.read_excel("data/belaok_mentah_16042022.xlsx", sheet_name="list_po")
     dfsku = pd.read_excel("data/belaok_mentah_16042022.xlsx", sheet_name="list_sku")
@@ -52,15 +47,15 @@ def run_bela_dash():
 
     # Row Nilai PO Created, PO Delivered dan PO Close
     b1, b2, b3 = st.columns(3)
-    b1.metric("PO Created (Rp.)", po_created)
-    b2.metric("PO Delivered (Rp.)", format_currency(po_delivered['sub_total'].sum(), 'Rp. ', locale='id_ID'))
-    b3.metric("PO Close (Rp.)", format_currency(po_close['sub_total'].sum(), 'Rp. ', locale='id_ID'))
+    b1.metric("PO Created", po_created)
+    b2.metric("PO Delivered", format_currency(po_delivered['sub_total'].sum(), 'Rp. ', locale='id_ID'))
+    b3.metric("PO Close", format_currency(po_close['sub_total'].sum(), 'Rp. ', locale='id_ID'))
     
     # Row Nilai Pajak Daerah, PPN dan PPH
     c1, c2, c3 = st.columns(3)
-    c1.metric("Pajak Daerah (Rp.)", format_currency(po_pd, 'Rp. ', locale='id_ID'))
-    c2.metric("PPN PKP (Rp.)", format_currency(po_ppn, 'Rp. ', locale='id_ID'))
-    c3.metric("PPH 22 dan PPH 23 (Rp.)", format_currency(po_pph, 'Rp. ', locale='id_ID'))
+    c1.metric("Pajak Daerah", format_currency(po_pd, 'Rp. ', locale='id_ID'))
+    c2.metric("PPN PKP", format_currency(po_ppn, 'Rp. ', locale='id_ID'))
+    c3.metric("PPH 22 dan PPH 23", format_currency(po_pph, 'Rp. ', locale='id_ID'))
 
     # Row Top 10 OPD Transaksi Terbanyak
     d1, d2 = st.columns((5,5))
