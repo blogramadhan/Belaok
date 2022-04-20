@@ -29,9 +29,9 @@ def run_bela_dash():
     vendor = dfv.shape
 
     # Olah data Nilai PO Created, PO Delivered dan PO Close
-    po_created = df['sub_total'].sum()
-    po_delivered = df[(df['status_po'] == "PO Delivered")]['sub_total'].sum()
-    po_close = df[(df['status_po'] == "PO Close")]['sub_total'].sum()
+    po_created = ('{:,}'.format(df['sub_total'].sum()))
+    po_delivered = ('{:,}'.format(df[(df['status_po'] == "PO Delivered")]['sub_total'].sum()))
+    po_close = ('{:,}'.format(df[(df['status_po'] == "PO Close")]['sub_total'].sum()))
 
     # Olah data Nilai Pajak Daerah, PPN dan PPH
     po_pd = po_close['pajak_daerah'].sum()
