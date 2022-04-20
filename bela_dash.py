@@ -56,8 +56,6 @@ def run_bela_dash():
     b2.metric("PO Delivered (Rp.)", format_currency(po_delivered['sub_total'].sum(), 'Rp. ', locale='id_ID')
     b3.metric("PO Close (Rp.)", format_currency(po_close['sub_total'].sum(), 'Rp. ', locale='id_ID')
     
-    format_currency(df['sub_total'].sum(), 'Rp. ', locale='id_ID
-
     # Row Nilai Pajak Daerah, PPN dan PPH
     c1, c2, c3 = st.columns(3)
     c1.metric("Pajak Daerah (Rp.)", '{:,}'.format(po_pd))
