@@ -58,9 +58,9 @@ def run_bela_dash():
     
     # Row Nilai Pajak Daerah, PPN dan PPH
     c1, c2, c3 = st.columns(3)
-    c1.metric("Pajak Daerah (Rp.)", '{:,}'.format(po_pd))
-    c2.metric("PPN PKP (Rp.)", '{:,}'.format(po_ppn))
-    c3.metric("PPH 22 dan PPH 23 (Rp.)", '{:,}'.format(po_pph))
+    c1.metric("Pajak Daerah (Rp.)", format_currency(po_pd, 'Rp. ', locale='id_ID'))
+    c2.metric("PPN PKP (Rp.)", format_currency(po_ppn, 'Rp. ', locale='id_ID'))
+    c3.metric("PPH 22 dan PPH 23 (Rp.)", format_currency(po_pph, 'Rp. ', locale='id_ID'))
 
     # Row Top 10 OPD Transaksi Terbanyak
     d1, d2 = st.columns((5,5))
