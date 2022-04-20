@@ -4,5 +4,4 @@ matplotlib
 numpy
 streamlit
 openpyxl
-locale
 babel.numbers
