@@ -25,7 +25,7 @@ def run_bela_dash():
     vendor = dfv.shape
 
     # Olah data Nilai PO Created, PO Delivered dan PO Close
-    po_created = format_currency(df['sub_total'].sum(), 'Rp. ', locale='id_ID')    
+    po_created = format_currency(df['total'].sum(), 'Rp. ', locale='id_ID')    
     po_delivered = df[(df['status_po'] == "PO Delivered")]
     po_close = df[(df['status_po'] == "PO Close")]
 
