@@ -13,9 +13,9 @@ def run_bela_dash():
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
     # Dataset
-    df = pd.read_excel("data/belaok_mentah_4072022.xlsx", sheet_name="list_po")
-    dfsku = pd.read_excel("data/belaok_mentah_4072022.xlsx", sheet_name="list_sku")
-    dfv = pd.read_excel("data/belaok_mentah_4072022.xlsx", sheet_name="list_vendor")
+    df = pd.read_excel("data/belaok_mentah_16042022.xlsx", sheet_name="list_po")
+    dfsku = pd.read_excel("data/belaok_mentah_16042022.xlsx", sheet_name="list_sku")
+    dfv = pd.read_excel("data/belaok_mentah_16042022.xlsx", sheet_name="list_vendor")
 
     df['bulan'] = pd.to_datetime(df['created_at']).dt.month
 
