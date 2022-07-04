@@ -17,7 +17,7 @@ def run_bela_dash():
     dfsku = pd.read_excel("data/belaok_mentah_4072022.xlsx", sheet_name="list_sku")
     dfv = pd.read_excel("data/belaok_mentah_4072022.xlsx", sheet_name="list_vendor")
 
-    df['bulan'] = pd.to_datetime(df['created_at']).dt.month
+    df['bulan'] = pd.to_datetime(df['po_created_at']).dt.month
 
     # Olah data Jumlah Produk, Jumlah Transaksi dan Jumlah Vendor
     sku = dfsku.shape
