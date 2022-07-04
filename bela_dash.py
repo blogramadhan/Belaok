@@ -53,7 +53,7 @@ def run_bela_dash():
     
     # Row Nilai Pajak Daerah, PPN dan PPH
     c1, c2, c3 = st.columns(3)
-    c1.metric("Pajak Daerah", "Tidak Ada"))
+    c1.metric("Pajak Daerah", "Tidak Ada")
     c2.metric("PPN PKP", format_currency(po_ppn, 'Rp. ', locale='id_ID'))
     c3.metric("PPH 22 dan PPH 23", format_currency(po_pph, 'Rp. ', locale='id_ID'))
 
