@@ -26,7 +26,7 @@ def run_bela_dash():
 
     # Olah data Nilai PO Created, PO Delivered dan PO Close
     po_created = format_currency(df['total'].sum(), 'Rp. ', locale='id_ID')    
-    po_delivered = df[(df['status_po'] == "PO On Ship")]
+    po_delivered = df[(df['status_po'] == "PO Delivered")]
     po_close = df[(df['status_po'] == "PO Close")]
 
     # Olah data Nilai Pajak Daerah, PPN dan PPH
