@@ -35,9 +35,9 @@ def run_bela_dash():
     po_pph = po_close['pph'].sum()
 
     df10b = po_delivered.buyer.value_counts().sort_values(ascending=False).head(10)
-    df10bnilai = po_delivered.groupby(by='buyer').sum().sort_values(by='sub_total',ascending=False)['sub_total'].head(10)
+    df10bnilai = po_delivered.groupby(by='buyer').sum().sort_values(by='total',ascending=False)['sub_total'].head(10)
     df10s = po_delivered.seller.value_counts().sort_values(ascending=False).head(10)
-    df10snilai = po_delivered.groupby(by='seller').sum().sort_values(by='sub_total',ascending=False)['sub_total'].head(10)
+    df10snilai = po_delivered.groupby(by='seller').sum().sort_values(by='total',ascending=False)['sub_total'].head(10)
 
     # Row Jumlah Produk, Transaksi dan Vendor
     a1, a2, a3 = st.columns(3)
